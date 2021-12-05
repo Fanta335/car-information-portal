@@ -1,4 +1,5 @@
 const PORT = process.env.PORT;
+const path = require("path");
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
@@ -12,6 +13,9 @@ app.use(
     extended: true,
   })
 );
+
+// Static resource routing
+app.use("/public", express.static(path.join(__dirname, "/public")));
 
 // Dynamic resource routing
 app.use("/form", require("./routes/form"));

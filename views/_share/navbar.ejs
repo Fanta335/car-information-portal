@@ -1,0 +1,23 @@
+<nav class="navbar navbar-light bg-light">
+  <form>
+    <div class="form-group">
+      <label for="car-make">Car Make</label>
+      <select class="form-control" id="car-make" onchange="">
+        <option>select</option>
+        <% for(const item of Makes){ %>
+          <option value="<%= item.make_id %>"><%= item.make_display %></option>
+        <% } %>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="car-make">Car Make</label>
+      <select class="form-control" id="car-make">
+        <option>select</option>
+        <% for(const item of Makes){ %>
+          <option value="<%= item.make_id %>"><%= item.make_display %></option>
+        <% } %>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+  </form>
+</nav>

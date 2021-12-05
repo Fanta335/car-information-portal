@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <%- include('./_share/metadata.ejs') %>
+    <title>Car information portal</title>
+    <%- include('./_share/stylesheets.ejs') %>
   </head>
   <body>
-    <form method="post" action="/form"><input type="text" name='text' /><button type="submit">submit</button></form>
+    <div class="wrapper">
+      <%- include('./_share/navbar.ejs', Makes) %>
+      <!-- <form method="post" action="/form"><input type="text" name='text' /><button type="submit">submit</button></form> -->
+      <%- include('./_share/footer.ejs') %>
+    </div>
+
+    <%- include('./_share/javascripts.ejs') %>
   </body>
 </html>
